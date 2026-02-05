@@ -3,11 +3,12 @@
 import { useState, useEffect } from 'react';
 import TourDatesAdmin from '@/components/admin/TourDatesAdmin';
 import GalleryAdmin from '@/components/admin/GalleryAdmin';
+import TimelineAdmin from '@/components/admin/TimelineAdmin';
 import UserManagement from '@/components/admin/UserManagement';
 import { authenticateUser, initializeDefaultUsers, UserData } from '@/lib/firebase-users';
 import { hasPermission, type UserRole } from '@/lib/auth';
 
-type Tab = 'tourdates' | 'gallery' | 'users';
+type Tab = 'tourdates' | 'gallery' | 'timeline' | 'users';
 
 export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<Tab>('gallery');
@@ -67,6 +68,7 @@ export default function AdminPage() {
   // Check permissions
   const canManageTourDates = currentUser ? hasPermission(currentUser.role as UserRole, 'canManageTourDates') : false;
   const canManageGallery = currentUser ? hasPermission(currentUser.role as UserRole, 'canManageGallery') : false;
+  const canManageTimeline = currentUser ? hasPermission(currentUser.role as UserRole, 'canManageTimeline') : false;
   const canManageUsers = currentUser ? hasPermission(currentUser.role as UserRole, 'canManageUsers') : false;
 
   if (initializing) {
@@ -212,6 +214,22 @@ export default function AdminPage() {
               </button>
             )}
 
+            {canManageTimeline && (
+              <button
+                onClick={() => setActiveTab('timeline')}
+                className={`px-6 py-4 font-medium transition-colors relative whitespace-nowrap ${
+                  activeTab === 'timeline'
+                    ? 'text-[#e11d48]'
+                    : 'text-white/60 hover:text-white'
+                }`}
+              >
+                Timeline
+                {activeTab === 'timeline' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#e11d48]" />
+                )}
+              </button>
+            )}
+
             {canManageUsers && (
               <button
                 onClick={() => setActiveTab('users')}
@@ -235,6 +253,7 @@ export default function AdminPage() {
       <main className="container mx-auto px-4 py-8">
         {activeTab === 'tourdates' && canManageTourDates && <TourDatesAdmin />}
         {activeTab === 'gallery' && canManageGallery && <GalleryAdmin />}
+        {activeTab === 'timeline' && canManageTimeline && <TimelineAdmin />}
         {activeTab === 'users' && canManageUsers && <UserManagement />}
 
         {/* No permission message */}
