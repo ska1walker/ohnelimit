@@ -178,6 +178,14 @@ export const tourDates: TourDate[] = [
   },
 ];
 
+// Streaming links for songs
+export interface StreamingLinks {
+  spotify?: string;
+  appleMusic?: string;
+  soundcloud?: string;
+  youtube?: string;
+}
+
 // Songs data with public domain audio
 export interface Song {
   id: number;
@@ -186,6 +194,7 @@ export interface Song {
   durationSeconds: number;
   coverArt: string;
   audioUrl: string;
+  streamingLinks?: StreamingLinks;
 }
 
 export const songs: Song[] = [
@@ -197,6 +206,11 @@ export const songs: Song[] = [
     coverArt: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&q=80',
     // Public domain rock audio from Internet Archive
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    streamingLinks: {
+      spotify: 'https://open.spotify.com/artist/ohnelimit',
+      appleMusic: 'https://music.apple.com/artist/ohnelimit',
+      soundcloud: 'https://soundcloud.com/ohnelimit',
+    },
   },
   {
     id: 2,
@@ -205,6 +219,11 @@ export const songs: Song[] = [
     durationSeconds: 252,
     coverArt: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&q=80',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    streamingLinks: {
+      spotify: 'https://open.spotify.com/artist/ohnelimit',
+      appleMusic: 'https://music.apple.com/artist/ohnelimit',
+      soundcloud: 'https://soundcloud.com/ohnelimit',
+    },
   },
   {
     id: 3,
@@ -213,6 +232,11 @@ export const songs: Song[] = [
     durationSeconds: 238,
     coverArt: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&q=80',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+    streamingLinks: {
+      spotify: 'https://open.spotify.com/artist/ohnelimit',
+      appleMusic: 'https://music.apple.com/artist/ohnelimit',
+      soundcloud: 'https://soundcloud.com/ohnelimit',
+    },
   },
   {
     id: 4,
@@ -221,6 +245,11 @@ export const songs: Song[] = [
     durationSeconds: 301,
     coverArt: 'https://images.unsplash.com/photo-1508252592163-5d3c3c559f36?w=300&q=80',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+    streamingLinks: {
+      spotify: 'https://open.spotify.com/artist/ohnelimit',
+      appleMusic: 'https://music.apple.com/artist/ohnelimit',
+      soundcloud: 'https://soundcloud.com/ohnelimit',
+    },
   },
   {
     id: 5,
@@ -229,6 +258,11 @@ export const songs: Song[] = [
     durationSeconds: 273,
     coverArt: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=300&q=80',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3',
+    streamingLinks: {
+      spotify: 'https://open.spotify.com/artist/ohnelimit',
+      appleMusic: 'https://music.apple.com/artist/ohnelimit',
+      soundcloud: 'https://soundcloud.com/ohnelimit',
+    },
   },
 ];
 
