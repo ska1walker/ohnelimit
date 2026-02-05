@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
 import TimelineSection from '@/components/TimelineSection';
 import TourDatesSection from '@/components/TourDatesSection';
 import StickyAudioPlayer from '@/components/StickyAudioPlayer';
@@ -15,6 +16,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection heroImage={images.hero} />
+
+      {/* About Section - Über uns */}
+      <AboutSection />
 
       {/* Timeline Section */}
       <TimelineSection events={timelineEvents} />

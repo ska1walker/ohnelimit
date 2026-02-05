@@ -1,6 +1,6 @@
-// Mock Data for Ohne Limit Band Website
+// Ohne Limit Band Website - Real Data from ohnelimit.net
 
-// High-quality Unsplash images with specific keywords
+// High-quality Unsplash images (placeholder until real images uploaded)
 export const images = {
   hero: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1920&q=80',
   heroAlt: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1920&q=80',
@@ -10,35 +10,70 @@ export const images = {
   bandLive: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&q=80',
 };
 
-// Band members placeholder data
+// Band info from ohnelimit.net
+export const bandInfo = {
+  name: 'OHNE LIMIT',
+  founded: 2022,
+  memberCount: 6,
+  genre: 'Postgrunge / Rock / Punkrock',
+  motto: 'OHNE LIMIT',
+  tagline: 'Hart. Laut. Unaufhaltsam.',
+  description: `Wir sind eine sechsköpfige Rockband im "klassischen" Line-Up mit 2 Gitarren, Bass und Drums, allerdings mit dem „Luxus" von zwei Sängern. In der aktuellen Besetzung rocken wir seit dem Jahr 2022.`,
+  style: `Wir kombinieren unsere "handgemachte", schnörkellose, puristische und kraftvolle Rockmusik mit deutschen Texten, die von eigenen Erlebnissen, von Höhen und Tiefen, sowie von besonderen Momenten des täglichen Lebens erzählen.`,
+  sound: `Stilistisch sind wir am ehesten dem Postgrunge zuzuordnen, jedoch ohne darauf festgelegt zu sein. Wir sind "ohne Limit" und offen für alle stilistischen Elemente und Facetten der Rock- und Punkrockmusik.`,
+  musicalElements: `Prägnante musikalische Stilelemente sind treibende und basslastige Beats mit druckvollem Gitarrensound. Die zum Teil metal-lastigen Gitarrenriffs im Wechsel mit melodiösen und cleanen Gitarrenparts bilden zusammen mit den dynamisch wechselnden Gesangsparts den aus dem Postgrunge bekannten Sound.`,
+  unique: `Dennoch etablieren wir einen eigenen und unverkennbaren Sound und sind auch immer für Stilelemente aus anderen Musik-Genres offen, getreu unserem Band-Motto: "OHNE LIMIT"`,
+};
+
+// Band history from ohnelimit.net
+export const bandHistory = {
+  title: 'Unsere Geschichte',
+  story: `Es begab sich eines Tages, dass sich zwei Männer an einer Bar trafen und viele Tequilas gemeinsam vernichteten. Am Ende wurde ein Entschluss gefasst: "Lass uns gemeinsam Musik machen..." Das Ergebnis war OHNE LIMIT.`,
+};
+
+// Real band members from ohnelimit.net
 export const bandMembers = [
   {
     id: 1,
-    name: 'Max Hartmann',
-    role: 'Lead Vocals & Guitar',
-    image: 'https://images.unsplash.com/photo-1548142813-c348350df52b?w=400&q=80',
-    bio: 'Founder and driving force behind Ohne Limit since 2015.',
+    name: 'Andy "Bassomator"',
+    role: 'Gründer und Songwriter, Bassist',
+    image: '/images/members/andy.jpg', // Placeholder - needs real image
+    bio: 'Gründungsmitglied und treibende Kraft am Bass.',
   },
   {
     id: 2,
-    name: 'Lisa Krüger',
-    role: 'Bass & Backing Vocals',
-    image: 'https://images.unsplash.com/photo-1534385842125-8c9ad0bd123c?w=400&q=80',
-    bio: 'The rhythmic backbone with thunderous bass lines.',
+    name: 'Chris "Gitarrero"',
+    role: 'Gründer und Songwriter, Leadgitarre',
+    image: '/images/members/chris.jpg',
+    bio: 'Gründungsmitglied mit den melodiösen und metal-lastigen Riffs.',
   },
   {
     id: 3,
-    name: 'Tom Weber',
-    role: 'Lead Guitar',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-    bio: 'Shredding solos that set the stage on fire.',
+    name: 'Björn "The Drummachine"',
+    role: 'Drummer und Taktgeber',
+    image: '/images/members/bjoern.jpg',
+    bio: 'Der Taktgeber mit den treibenden und basslastigen Beats.',
   },
   {
     id: 4,
-    name: 'Sarah Müller',
-    role: 'Drums',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
-    bio: 'Powerhouse drummer with relentless energy.',
+    name: 'Matthias "Matze"',
+    role: 'Sänger, Keyboard und Techniker',
+    image: '/images/members/matthias.jpg',
+    bio: 'Vielseitiger Sänger mit technischem Know-how.',
+  },
+  {
+    id: 5,
+    name: 'Florian "Flo"',
+    role: 'Rhythmusgitarre',
+    image: '/images/members/florian.jpg',
+    bio: 'Sorgt für den druckvollen Gitarrensound.',
+  },
+  {
+    id: 6,
+    name: 'Joachim "Joaquín"',
+    role: 'Sänger und Songwriter',
+    image: '/images/members/joachim.jpg',
+    bio: 'Zweiter Sänger mit kraftvoller Stimme und Texten aus dem Leben.',
   },
 ];
 
@@ -237,20 +272,18 @@ export const news: NewsItem[] = [
   },
 ];
 
-// Social links
+// Social links (real from ohnelimit.net)
 export const socialLinks = {
+  facebook: 'https://facebook.com/ohnelimitband',
   instagram: 'https://instagram.com/ohnelimit',
   spotify: 'https://open.spotify.com/artist/ohnelimit',
   youtube: 'https://youtube.com/@ohnelimit',
-  tiktok: 'https://tiktok.com/@ohnelimit',
-  facebook: 'https://facebook.com/ohnelimitband',
 };
 
-// Contact info
+// Contact info (real from ohnelimit.net)
 export const contactInfo = {
-  booking: 'booking@ohnelimit.de',
-  press: 'presse@ohnelimit.de',
-  management: 'management@ohnelimit.de',
+  email: 'ohnelimitband@googlemail.com',
+  booking: 'ohnelimitband@googlemail.com',
 };
 
 // Timeline events for band history
